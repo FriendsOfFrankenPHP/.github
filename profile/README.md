@@ -86,7 +86,7 @@ Friends of FrankenPHP is a community dedicated to the [FrankenPHP](https://frank
 - The Go Community - For the excellent ecosystem
 - The PHP Community - For continuing to push boundaries
 
-<!-->
+<!--
 ## 📞 Contact
 
 - 💬 Start a [Discussion](../../discussions)
