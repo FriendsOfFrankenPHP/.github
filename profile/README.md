@@ -69,7 +69,7 @@ Friends of FrankenPHP is a community dedicated to the [FrankenPHP](https://frank
 - [Official FrankenPHP Website](https://frankenphp.dev/)
 - [FrankenPHP Documentation](https://frankenphp.dev/docs/)
 - [Main FrankenPHP Repository](https://github.com/php/frankenphp)
-- [Community Discord](https://discord.gg/frankenphp)
+- [FrankenPHP Discussion](https://github.com/php/frankenphp/discussions)
 
 ## 🌟 Support Us
 
@@ -78,12 +78,21 @@ Friends of FrankenPHP is a community dedicated to the [FrankenPHP](https://frank
 - 💡 **Suggest** improvements
 - 📢 **Share** our projects in the community
 
+## 🙏 Acknowledgments
+
+- [Kévin Dunglas](https://github.com/dunglas) - Creator of FrankenPHP
+- [The FrankenPHP Core Team](https://github.com/php/frankenphp/graphs/contributors) - For building an amazing foundation
+- Our Contributors - For making this community possible
+- The Go Community - For the excellent ecosystem
+- The PHP Community - For continuing to push boundaries
+
+<!-->
 ## 📞 Contact
 
 - 💬 Start a [Discussion](../../discussions)
 - 🐛 Report issues via [Issues](../../issues)
 - 📧 Contact maintainers
-
+-->
 ---
 
 ## Made with ❤️ by the FrankenPHP Community
