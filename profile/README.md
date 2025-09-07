@@ -41,7 +41,7 @@ Friends of FrankenPHP is a community dedicated to the [FrankenPHP](https://frank
 
 ### Joining the Organization
 
-- Submit an issue in this repository to request joining
+- [Submit an issue](https://github.com/FriendsOfFrankenPHP/.github/issues/new) in this repository to request joining
 - Present your project or interest in FrankenPHP
 - Follow our [Code of Conduct](CODE_OF_CONDUCT.md)
 
