@@ -1,0 +1,83 @@
+  
+- name: type:enhancement
+  color: "84b6eb"
+  description: Feature request or improvement
+
+- name: type:question
+  color: "d876e3"
+  description: Question or clarification needed
+
+- name: status:blocked
+  color: "e4e669"
+  description: Blocked by another issue or dependency
+
+- name: status:duplicate
+  color: "cfd3d7"
+  description: Duplicate of another issue
+
+- name: status:invalid
+  color: "e4e669"
+  description: Invalid or out of scope issue
+- name: community:general
+  color: "0366d6"
+  description: General discussions, community topics
+
+- name: community:membership
+  color: "6f42c1"
+  description: Request to join the organization
+
+- name: proposal:general
+  color: "0e8a16"
+  description: Project or extension proposal
+
+- name: proposal:extension
+  color: "d73a4a"
+  description: FrankenPHP extension
+
+- name: proposal:tool
+  color: "fbca04"
+  description: Tool or script related to FrankenPHP
+
+- name: resource:documentation
+  color: "0052cc"
+  description: Documentation, guides, examples
+
+- name: resource:external
+  color: "5319e7"
+  description: External resources, tutorials, articles
+
+- name: proposal:accepted
+  color: "0e8a16"
+  description: Approved proposal
+
+- name: proposal:under-review
+  color: "fbca04"
+  description: Under validation/review
+
+- name: status:wip
+  color: "cccccc"
+  description: Work In Progress
+
+- name: status:help-wanted
+  color: "008672"
+  description: Looking for community help
+
+- name: status:good-first-issue
+  color: "7057ff"
+  description: Easy issue for new contributors
+
+- name: status:bug
+  color: "d73a4a"
+  description: Bug report
+
+- name: type:security
+  color: "b60205"
+  description: Security issue
+
+- name: type:tests
+  color: "1d76db"
+  description: Adding or maintaining tests
+
+- name: type:refactor
+  color: "fef2c0"
+  description: Refactor, technical debt
