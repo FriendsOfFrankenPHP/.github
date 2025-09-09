@@ -39,5 +39,5 @@ body:
       label: Code of Conduct
       description: Please confirm you have read and agree to our Code of Conduct
       options:
-        - label: I agree to follow the [Code of Conduct](../blob/main/profile/CODE_OF_CONDUCT.md)
+        - label: I agree to follow the [Code of Conduct](../.github/blob/main/profile/CODE_OF_CONDUCT.md)
           required: true
