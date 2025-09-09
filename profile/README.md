@@ -41,7 +41,7 @@ Friends of FrankenPHP is a community dedicated to the [FrankenPHP](https://frank
 
 ### Joining the Organization
 
-- [Submit an issue](https://github.com/FriendsOfFrankenPHP/.github/issues/new) in this repository to request joining
+- [Submit an issue](https://github.com/FriendsOfFrankenPHP/.github/issues/new?template=join.yml) in this repository to request joining
 - Present your project or interest in FrankenPHP
 - Follow our [Code of Conduct](CODE_OF_CONDUCT.md)
 
@@ -50,7 +50,7 @@ Friends of FrankenPHP is a community dedicated to the [FrankenPHP](https://frank
 1. **Develop** your extension (or tool ?)
 2. **Document** your project (README, examples)
 3. **Test** your code
-4. **Submit** a request to add your project to the organization
+4. **Submit** a [request](https://github.com/FriendsOfFrankenPHP/.github/issues/new?template=propose-project.yml) to add your project to the organization
 
 ### Quality Standards
 
