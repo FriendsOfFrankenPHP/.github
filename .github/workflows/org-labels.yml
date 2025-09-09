@@ -25,6 +25,10 @@ jobs:
 
           # convert repos to JSON array for GitHub Actions matrix
           repos_json=$(printf '%s\n' $repos | jq -R . | jq -s .)
+          # Ensure repos_json is at least an empty array
+          if [ -z "$repos_json" ] || [ "$repos_json" = "null" ]; then
+            repos_json="[]"
+          fi
           echo "repos=$repos_json" >> "$GITHUB_OUTPUT"
         env:
           GH_TOKEN: ${{ secrets.ORG_ADMIN_TOKEN }}
