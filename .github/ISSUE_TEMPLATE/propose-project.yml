@@ -1,0 +1,71 @@
+name: 🚀 Propose a Project
+description: Submit your FrankenPHP extension or tool for inclusion in the organization
+title: "Project proposal: <project-name>"
+labels: ["project", "proposal"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🙌 Thanks for proposing your project!  
+        Fill in the details below so we can review it for inclusion in the organization.
+  - type: input
+    id: project-name
+    attributes:
+      label: Project Name
+      description: The name of your extension/tool
+      placeholder: ex. frankenphp-cache
+    validations:
+      required: true
+  - type: input
+    id: repository-url
+    attributes:
+      label: Repository URL
+      description: Link to your personal GitHub repo
+      placeholder: ex. https://github.com/username/frankenphp-cache
+    validations:
+      required: true
+  - type: dropdown
+    id: project-type
+    attributes:
+      label: Project Type
+      description: What type of project is this?
+      options:
+        - FrankenPHP Extension
+        - Development Tool
+        - Documentation/Resource
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Short description of what your project does
+      placeholder: ex. A high-performance caching extension for FrankenPHP
+    validations:
+      required: true
+  - type: textarea
+    id: features
+    attributes:
+      label: Features
+      description: List key features of your project
+      placeholder: |
+        - Feature 1
+        - Feature 2
+        - etc.
+    validations:
+      required: false
+  - type: checkboxes
+    id: standards
+    attributes:
+      label: Quality Standards Checklist
+      description: Ensure your project meets these standards
+      options:
+        - label: Well-documented code
+        - label: Unit tests (when applicable)
+        - label: Detailed README with examples
+        - label: Compatible with recent FrankenPHP versions
+        - label: Open source license included
+    validations:
+      required: true
