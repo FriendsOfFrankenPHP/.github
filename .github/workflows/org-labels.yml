@@ -14,6 +14,7 @@ jobs:
       - name: Get all active repos from org (excluding forks, archived, and .github)
         id: set-matrix
         run: |
+          set -euo pipefail
           echo "📡 Fetching repositories from FriendsOfFrankenPHP..."
           repos=$(gh api \
             -H "Accept: application/vnd.github+json" \
@@ -23,13 +24,12 @@ jobs:
               | select(.archived == false and .fork == false and .name != ".github") 
               | .full_name')
 
-          # convert repos to JSON array for GitHub Actions matrix
-          repos_json=$(printf '%s\n' $repos | jq -R . | jq -s .)
-          # Ensure repos_json is at least an empty array
-          if [ -z "$repos_json" ] || [ "$repos_json" = "null" ]; then
+          if [ -z "$repos" ]; then
             repos_json="[]"
+          else
+            repos_json=$(printf '%s\n' $repos | jq -R . | jq -s .)
           fi
-          echo "repos=$repos_json" >> "$GITHUB_OUTPUT"
+          echo "repos=${repos_json}" >> "$GITHUB_OUTPUT"
         env:
           GH_TOKEN: ${{ secrets.ORG_ADMIN_TOKEN }}
 
