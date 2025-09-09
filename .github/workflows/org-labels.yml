@@ -29,12 +29,14 @@ jobs:
           else
             repos_json=$(printf '%s\n' $repos | jq -R . | jq -s .)
           fi
+          echo "Repos found: $repos_json"
           echo "repos=${repos_json}" >> "$GITHUB_OUTPUT"
         env:
           GH_TOKEN: ${{ secrets.ORG_ADMIN_TOKEN }}
 
   sync-labels:
     needs: get-repos
+    if: needs.get-repos.outputs.repos != '[]'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
