@@ -1,0 +1,43 @@
+name: 🙋 Join the Community
+description: Request to join the FriendsOfFrankenPHP organization
+title: "Membership request: <your-username>"
+labels: ["community", "membership"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        👋 Thanks for your interest in joining **FriendsOfFrankenPHP**!  
+        Please provide some details so we can add you to the organization.
+  - type: input
+    id: github-username
+    attributes:
+      label: GitHub Username
+      description: Your GitHub handle
+      placeholder: ex. octocat
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Tell us why you want to join the community
+      placeholder: ex. I’m building an extension for FrankenPHP...
+    validations:
+      required: true
+  - type: textarea
+    id: contributions
+    attributes:
+      label: Contributions or Interests
+      description: Share what you have done (or plan to do) related to FrankenPHP
+      placeholder: ex. Created a caching extension / Interested in monitoring / Explain your interest...
+    validations:
+      required: false
+  - type: checkboxes
+    id: coc
+    attributes:
+      label: Code of Conduct
+      description: Please confirm you have read and agree to our Code of Conduct
+      options:
+        - label: I agree to follow the [Code of Conduct](../blob/main/CODE_OF_CONDUCT.md)
+          required: true
