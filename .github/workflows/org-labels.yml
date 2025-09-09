@@ -1,0 +1,49 @@
+name: 🔖 Sync Org Labels
+
+on:
+  workflow_dispatch: # lancement manuel
+  schedule:
+    - cron: "0 3 * * 1" # chaque lundi à 03h00 UTC
+
+jobs:
+  get-repos:
+    runs-on: ubuntu-latest
+    outputs:
+      repos: ${{ steps.set-matrix.outputs.repos }}
+    steps:
+      - name: Get all active repos from org (excluding forks, archived, and .github)
+        id: set-matrix
+        run: |
+          echo "📡 Fetching repositories from FriendsOfFrankenPHP..."
+          repos=$(gh api \
+            -H "Accept: application/vnd.github+json" \
+            /orgs/FriendsOfFrankenPHP/repos \
+            --paginate \
+            --jq '.[] 
+              | select(.archived == false and .fork == false and .name != ".github") 
+              | .full_name')
+
+          # convert repos to JSON array for GitHub Actions matrix
+          repos_json=$(printf '%s\n' $repos | jq -R . | jq -s .)
+          echo "repos=$repos_json" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ secrets.ORG_ADMIN_TOKEN }}
+
+  sync-labels:
+    needs: get-repos
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        repo: ${{ fromJson(needs.get-repos.outputs.repos) }}
+    steps:
+      - name: Checkout org/.github repo
+        uses: actions/checkout@v4
+
+      - name: Apply labels to ${{ matrix.repo }}
+        uses: crazy-max/ghaction-github-labeler@v5
+        with:
+          github-token: ${{ secrets.ORG_ADMIN_TOKEN }}
+          yaml-file: .github/labels.yml
+          repository: ${{ matrix.repo }}
+          prune: true
